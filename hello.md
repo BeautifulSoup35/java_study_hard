@@ -67,3 +67,4 @@ System.out.print(a+b);
 
 git add .
 git commit -m "feat: 20250212 markdown lesson"
+git push
