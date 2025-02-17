@@ -9,6 +9,9 @@ public class Animal {
     //생성자 하나 하나 정의하세요
 
 
+    public Animal() {
+    }
+
     public Animal(String animalName) {
         this.animalName = animalName;
     }
@@ -41,6 +44,8 @@ public class Animal {
     }
     public  void move(){
         System.out.println("움직입니다. ");
-
+//부모 클래스
+        //git add .
+        //git commit -m "fead: 20250217"
     }
 }
