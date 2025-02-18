@@ -34,4 +34,39 @@ package chapter13_adstraction.abstract_class;
         TabletFactory.java
  */
 public class Main {
+    public static void main(String[] args) {
+        //추상 클래스는 객체 생성이 불가능하다고 했습니다
+//        Factory factory1 = new Factory("임시공장") {
+//            @Override
+//            public void produce(String model) {
+//                System.out.println(this.getName() +"에서 ["+model+"]를 생성합니다");
+//            }//익명 클래스
+//
+//            @Override
+//            public void manage() {
+//                System.out.println(this.getName() +"에서 야근 중입니다.");
+//
+//
+//            }
+//        };//객체 생성에세미 콜론 을 넣어야함
+        //근데 이상의 개념은 익명 클래스로 java 12(11일수도 있습니다)에 적용됨
+        //재사용하지 않고 한 번만 사용하고 치울 예정이라면 요긴한 사용 예상
+
+
+
+//        factory1.produce("백색가전");
+//        factory1.manage();
+        PhoneFactory phoneFactory1 = new PhoneFactory("애플 스마트폰 공장");
+        TabletFactory tabletFactory1 = new TabletFactory("애플 태블릿 공장");
+
+        //슈퍼 클래스의 추상 메서드를 각 서브 클래스들이 구현부를 작성해 호출한 예시
+        phoneFactory1.produce("아이폰17");
+        phoneFactory1.produce("아이패드 프로 13인치");
+
+        //슈퍼 클래스 의 일반 메섣드를 서브 클래스에서 호출한 예시 ->overrride 하지 안아도 사용 가능
+        //재정의를 안하니 상관없음
+        phoneFactory1.manage();//스마트폰 공장을 관리합니다.
+
+
+    }
 }
