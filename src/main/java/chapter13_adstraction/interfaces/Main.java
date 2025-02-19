@@ -10,7 +10,7 @@ package chapter13_adstraction.interfaces;
         다중 상속을 지원-> 이를 통해 클래스가 여러 인터페이슬 구현할 수 있음
         :추상 클래스는 단일 상속을 지원너한다 상속 과정을 보기 쉽다
 
-    튿징
+    특징
         1. 추상 메서드 : 인터페이스 내의 모든 메서드는 기본적으로 추상 메서드
         2. 상수 : 인터페이스 내에서 선언된 변수는 모드 '자동으로 '
         public static final 상수로 취급됨
@@ -39,8 +39,12 @@ package chapter13_adstraction.interfaces;
  */
 public class Main {
     public static void main(String[] args) {
+        //리모컨 부르기
         RemoteController remoteController = new RemoteController(
-                new PowerButton(), new VolumeDownButton(), new VolumeUpButton());
+                new PowerButton(), new VolumeDownButton(), new VolumeUpButton(), new ChannelUpButton(),new ChannelDownButton() );
+
+        AirconditionerController airconditionerController = new AirconditionerController(
+                new TemparatureDownBoutton(), new TemparatureUpBoutton(),new PowerButton());
 //-> 생성자들 생성 상태 -> 객체 선언이 되었을까??의 질문
 // RemoteController remoteController = new RemoteController();
         /*
@@ -61,12 +65,19 @@ public class Main {
 //        powerbutten 객체명 안해서 없음
 
         remoteController.onPressedPowerButton();//전원을 켭니다
-
+//PressedVolume
         remoteController.onPressedVolumeUpButton();//음량을 계속 올립니다
         remoteController.onPressedVolumeDownButton();//음량을 계속 내립니다
 
         remoteController.onDownVolumeDownButton();//음량을 한 칸 내립니다.
         remoteController.onUpVolumeDownButton();//음량을 한 칸 올립니다.
+
+        remoteController.onPressedChannelUp();//채널을 계속 올립니다
+        remoteController.onPressedChannelDown();
+
+        remoteController.onDowndChannelDown();
+        remoteController.onUpChannelUp();
+        remoteController.onPressedPowerButton();
         //remote 타고 들어가야함 // 현재 이중 호출
         /*
             다중상속을 지원하지 않는 Java클래스에서 remoteController하는 객체가
@@ -76,7 +87,20 @@ public class Main {
 
             그리고 main에서 "remoteController.onPressedPowerButton"로 호출하면
             onPressedPowerButton얘가 powerButton.onPressed();를 다시 호출해서 전체 기능 구현
+
+         과제2
+         AirconditionerController 만들기
          */
+        System.out.println();
+        airconditionerController.airpressed();
+
+        airconditionerController.temparatureDown();
+        airconditionerController.powerTemparatureDown();
+
+        airconditionerController.temparatureUp();
+        airconditionerController.PowerTemparatureUp();
+        airconditionerController.airpressed();
+
 
 
 

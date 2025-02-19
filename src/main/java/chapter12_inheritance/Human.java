@@ -4,6 +4,8 @@ package chapter12_inheritance;
     Main에서
     human 객체 생성후  setter를 이용하여 이름을 받고
     getter로 출력하시오
+
+    사실상 필드와 함수 공유
  */
 public class Human extends Animal {
     public Human() {

@@ -9,15 +9,20 @@ public class RemoteController {
     //상속 안 받습니다
     // 필드 선언 -> 이전까지는 java의 기본 자료형만을 사용했지만
     //이번에 처음으로 우리가 직접 정의한 클래스가 자료형이 되는 필드를 적용함
+    //     PowerButton powerButton;
     private PowerButton powerButton;
-//     PowerButton powerButton;
     private VolumeDownButton volumeDownButton;
     private VolumeUpButton volumeUpButton;
-
-    public RemoteController(PowerButton powerButton, VolumeDownButton volumeDownButton, VolumeUpButton volumeUpButton) {
+    private ChannelDownButton channelDownButton;
+    private ChannelUpButton channelUpButton;
+//생성자
+    public RemoteController(PowerButton powerButton, VolumeDownButton volumeDownButton, VolumeUpButton volumeUpButton,
+                            ChannelUpButton channelUpButton, ChannelDownButton channelDownButton) {
         this.powerButton = powerButton;
         this.volumeDownButton = volumeDownButton;
         this.volumeUpButton = volumeUpButton;
+        this.channelDownButton = channelDownButton;
+        this.channelUpButton= channelUpButton;
     }
 
     //메서드 구현
@@ -40,4 +45,22 @@ public class RemoteController {
     public void onUpVolumeDownButton(){
         volumeUpButton.onPressed();
     }
+
+    public void onPressedChannelDown(){
+        channelDownButton.ondown();
+    }
+
+    public void onDowndChannelDown(){
+        channelDownButton.onPressed();
+    }
+
+    public void onPressedChannelUp(){
+        channelUpButton.onup();
+    }
+
+    public void onUpChannelUp(){
+        channelUpButton.onPressed();
+    }
+
+
 }

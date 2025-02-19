@@ -6,7 +6,7 @@ import java.net.SocketTimeoutException;
 public class VolumeDownButton extends Button{
     @Override
     public void onPressed() {
-        System.out.println("음량을 한 칸 내립니다.");
+        System.out.println("음량을 한 번 내립니다.");
     }
 //alt ins로 가지고온 우리가 선택해 가지고 온
     @Override
