@@ -1,6 +1,6 @@
 package chapter14_casting.centralcontrol;
 
-public class LED implements Power {
+public class Speaker implements Power{
     @Override
     public void on() {
 
@@ -8,8 +8,10 @@ public class LED implements Power {
 
     @Override
     public void off() {
+
     }
-    public void changeColor(){
-        System.out.println("led색깔을 바꿉니다.");
+
+    public void changeEqula(){
+        System.out.println("이퀄라이저를 변경합니다.");
     }
 }
