@@ -14,8 +14,18 @@ public class ObjectTestMain {
 
         boolean result5 = strExample1.equals(strExample2);
         System.out.println(result5);//true
-
         //toSring 자주 쓴다
+
+        //객체생성
+        ObjectTest objectTest1 = new ObjectTest("안근수", "akvhrn");
+        ObjectTest objectTest2 = new ObjectTest("권민주", "덕천");
+        System.out.println(objectTest1.displayInfo2());
+        objectTest1.displayInfo1();
+        objectTest2.displayInfo1();
+
+//        System.out.println(objectTest2.toString()); -> tostring 불필요
+        System.out.println(objectTest2);//tostring오버라이딩 안했으면 그저 주소만 나왔을 코드
+        //객체를 그냥 부르는게 사실 불가능
 
     }
 }

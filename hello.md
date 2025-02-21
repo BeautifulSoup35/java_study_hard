@@ -77,3 +77,7 @@ git commit -m "faet: 20250219 casting started"
 git add .
 git commit -m "feat: 20250220 Object Class"
 git push
+
+git add .
+git commit -m "feat: 20250221 lombok installed"
+git push
