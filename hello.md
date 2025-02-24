@@ -81,3 +81,7 @@ git push
 git add .
 git commit -m "feat: 20250221 lombok installed"
 git push
+
+git add .
+git commit -m "feat: 20250224 singleton done / builder pattern started "
+git push
