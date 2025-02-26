@@ -85,3 +85,7 @@ git push
 git add .
 git commit -m "feat: 20250224 singleton done / builder pattern started "
 git push
+
+git add .
+git commit -m "feat: 20250226 java lesson finished"
+git push
